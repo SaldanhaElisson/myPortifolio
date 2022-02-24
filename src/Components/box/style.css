@@ -1,0 +1,52 @@
+.box{
+    background-color: var(--box-collors);
+    width: 21.75rem ;
+    height: 22.75rem ;
+    padding-top: 1.5rem;
+    padding-left: 1.2rem;
+
+    margin-top: 2rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    border-radius: 0.8rem;
+}
+/* 
+p {
+    font-size: 1rem;
+} */
+
+.Title{
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--collor-font);
+}
+
+ul{
+    list-style-position: inside;
+    
+    font-family: var(--font-font);
+    color: var(--collor-font);
+    margin-left: 1.2rem;
+}
+
+li{
+    font-size: 1rem;
+    font-weight: bold;
+
+    margin-bottom: 1rem;
+}
+
+li > p {
+    margin-left: 1.6rem;
+    width: 10rem;
+    font-weight: 300;
+
+    color: var(--collor-font);
+    font-size: 0.9rem;
+}
+
+li > p:nth-child(2) {
+    font-weight: lighter;
+}
