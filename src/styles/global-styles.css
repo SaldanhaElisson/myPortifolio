@@ -16,12 +16,39 @@
 body{
     background-color: var(--body-collor);
     font-size: 62.5%;
+
+}
+
+#root{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    grid-template-areas: "COL1 COL2";
+                        
+    /* gap: 2rem; */
 }
 
 .date{
-    margin: 1rem 1rem 1rem
+    margin: 1rem 1rem 1rem;
+    grid-area: COL1;
+}
+
+.projects{
+    grid-area: COL2;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.MyProjects {
+    display: flex;
+}
+
+.MyProjects :nth-child(1){
+    margin-right: 1.5rem;
 }
 
 p{
     font-family: var(--font-font);
 }
+
+

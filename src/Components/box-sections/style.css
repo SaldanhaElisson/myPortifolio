@@ -1,0 +1,37 @@
+.boxSection{
+    width: 61.5rem;
+    height: 5rem;
+
+    justify-content: space-between;
+    background-color: var(--box-collors);
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 0.8rem;
+
+    display: flex;
+    padding: 2rem;
+}
+
+.boxSection > a {
+    text-decoration: none;
+   
+
+    font-family: var(--font-font);
+    font-size: 0.8rem;
+    color: var(--collor-font);
+
+}
+
+.boxSection > a:visited{
+    color: var(--collor-font);
+}
+
+.Title{
+    margin: 0;
+}
+
+.Title.TitleSection {    
+    margin: 0;
+}
+
+

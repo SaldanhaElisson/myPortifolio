@@ -1,8 +1,13 @@
 import { Component } from "react";
+import BoxSection from "../../Components/box-sections";
 import BoxInformations from "../../Components/box/box-informations";
+import BoxProjects from "../../Components/boxProjects";
 import Profile from "../../Components/profile";
 
 import LoadDate from "../../utils/load-date";
+import getRecenteRepo from "../../utils/get-recent-repo";
+
+
 
 class Home extends Component {
     state = {
@@ -53,20 +58,24 @@ class Home extends Component {
           Empresa: 'Udemy'
         }
       ],
-
-      dateGitHub: []
-
+      dateGitHub: [],
+      RecentRepoGIt: []
     }
 
     async componentDidMount(){
-      const datesGit = await LoadDate()
+      const datesGit = await LoadDate('https://api.github.com/users/SaldanhaElisson')
       this.setState({ dateGitHub: datesGit})
+      
+      const repoGit = await LoadDate('https://api.github.com/users/SaldanhaElisson/repos') 
+      const recetenRepo = await getRecenteRepo(repoGit)
+      this.setState({ RecentRepoGIt: recetenRepo})
     }
   
   render() {
     const { Experiencia } = this.state 
     const { Educação } = this.state
     const { dateGitHub } = this.state
+    const { RecentRepoGIt } = this.state
 
     return (
       <>
@@ -81,7 +90,11 @@ class Home extends Component {
       </div>
 
       <div className="projects">
-
+        < BoxSection title={'My Projects'}/>
+        <div className="MyProjects">
+        < BoxProjects />
+        < BoxProjects />
+        </div>
       </div>
         
       </>

@@ -1,7 +1,6 @@
-const LoadDate = async () => {
-    const dadosUser = 'https://api.github.com/users/SaldanhaElisson'
+const LoadDate = async (link) => {
 
-    const dados = await fetch(dadosUser)
+    const dados = await fetch(link)
 
    const dadosJson = await dados.json()
 
