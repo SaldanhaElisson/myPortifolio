@@ -1,0 +1,18 @@
+.boxProjects {
+    display: flex;
+
+    margin-bottom: 1rem;
+}
+
+.folder-img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.boxProjects > a {
+    text-decoration: none;
+}
+
+.boxProjects > a:visited {
+    text-decoration: none;
+}

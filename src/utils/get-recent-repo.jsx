@@ -17,7 +17,7 @@ const getRecenteRepo = (repo) => {
         
     })
     
-    return repos.slice(0, 5)
+    return repos.slice(0, 2)
 
 }
 

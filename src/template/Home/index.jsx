@@ -1,11 +1,11 @@
 import { Component } from "react";
 import BoxSection from "../../Components/box-sections";
 import BoxInformations from "../../Components/box/box-informations";
-import BoxProjects from "../../Components/boxProjects";
 import Profile from "../../Components/profile";
 
 import LoadDate from "../../utils/load-date";
 import getRecenteRepo from "../../utils/get-recent-repo";
+import CreatBoxProject from "../../Components/create-box-projects";
 
 
 
@@ -65,10 +65,13 @@ class Home extends Component {
     async componentDidMount(){
       const datesGit = await LoadDate('https://api.github.com/users/SaldanhaElisson')
       this.setState({ dateGitHub: datesGit})
+
+      console.log(datesGit)
       
       const repoGit = await LoadDate('https://api.github.com/users/SaldanhaElisson/repos') 
-      const recetenRepo = await getRecenteRepo(repoGit)
-      this.setState({ RecentRepoGIt: recetenRepo})
+      const RecentRepoGIt = await getRecenteRepo(repoGit)
+      this.setState({ RecentRepoGIt })
+
     }
   
   render() {
@@ -90,11 +93,13 @@ class Home extends Component {
       </div>
 
       <div className="projects">
-        < BoxSection title={'My Projects'}/>
+        < BoxSection title={'My Projects'} key = {"n2"}/>
         <div className="MyProjects">
-        < BoxProjects />
-        < BoxProjects />
+        < CreatBoxProject projects={ RecentRepoGIt } key = {"n1"} />
         </div>
+
+        < BoxSection title={'Recente Posts'}/>
+
       </div>
         
       </>

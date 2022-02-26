@@ -36,12 +36,8 @@ body{
 .projects{
     grid-area: COL2;
     margin: 0 auto;
-    margin-top: 1rem;
 }
 
-.MyProjects {
-    display: flex;
-}
 
 .MyProjects :nth-child(1){
     margin-right: 1.5rem;
