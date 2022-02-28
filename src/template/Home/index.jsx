@@ -71,6 +71,8 @@ class Home extends Component {
       const repoGit = await LoadDate('https://api.github.com/users/SaldanhaElisson/repos') 
       const RecentRepoGIt = await getRecenteRepo(repoGit)
       this.setState({ RecentRepoGIt })
+      
+      console.log(repoGit)
 
     }
   

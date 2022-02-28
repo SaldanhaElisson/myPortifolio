@@ -13,10 +13,7 @@ const getRecenteRepo = (repo) => {
         return a.updated_at - b.updated_at 
     }).reverse()
 
-    const recetenRepo = repo.map((e) => {
-        
-    })
-    
+   
     return repos.slice(0, 2)
 
 }
